@@ -1,0 +1,11 @@
+<h1>This is Girish's Home Page</h1>
+{% load static %}
+<img src="{% static 'portfoio/3.jpg' %}">
+{% for project in projects %}
+<h2> {{ project.title }}</h2>
+<p> {{ projects.description }}</p>
+<img src = "{{ project.image.url }}">
+{% if project.url %}
+<a href=" {{ project.url }}"> Link </a>
+{% endif %}
+{% endfor %}
