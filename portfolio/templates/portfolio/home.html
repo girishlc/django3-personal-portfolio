@@ -1,6 +1,11 @@
+{% extends 'portfolio/base.html' %}
+{% block content %}
+<h1>Hello, world!</h1>
 <h1>This is Girish's Home Page</h1>
 {% load static %}
 <img src="{% static 'portfoio/3.jpg' %}">
+<a href="{% static 'portfolio/statement.pdf' %}">Doc</a>
+<a href="{% url 'blog:all_blogs' %}">BLOG</a>
 {% for project in projects %}
 <h2> {{ project.title }}</h2>
 <p> {{ projects.description }}</p>
@@ -9,3 +14,4 @@
 <a href=" {{ project.url }}"> Link </a>
 {% endif %}
 {% endfor %}
+{% endblock %}
